@@ -23,10 +23,10 @@ function App() {
 
     const shuffleCards = () => {
       newCards.length = 0;
-      while(newCards.length < numActiveCards) {
+      while (newCards.length < numActiveCards) {
         let index = Math.floor(Math.random() * cards.length);
         let newCard = cards.slice(index, index + 1)[0];
-        if(!newCards.some(card => card === newCard)) {
+        if (!newCards.some(card => card === newCard)) {
           newCards.push(newCard);
         }
       }
@@ -34,7 +34,7 @@ function App() {
     }
 
     const handleCardClick = (e) => {
-      if(clickedCards.some(card => card === e.target.dataset.value)) {
+      if (clickedCards.some(card => card === e.target.dataset.value)) {
         setIsGameOver(true);
       } else {
         setClickedCards([...clickedCards, e.target.dataset.value]);
@@ -56,7 +56,7 @@ function App() {
 
   useEffect(() => {
     setActiveCards([]);
-    if(score > highScore) {
+    if (score > highScore) {
       setHighScore(score);
     }
     setClickedCards([]);
@@ -68,11 +68,11 @@ function App() {
   return (
     <div className="App">
       <h1>Memory Card Game</h1>
-      <Scoreboard score={score} highScore={highScore}/>
+      <Scoreboard score={score} highScore={highScore} />
       <button className='start'>Start Game</button>
       <div className='play-area'>
         {activeCards.map(card => {
-          return <Card name={card} key={card}/>
+          return <Card name={card} key={card} />
         })}
       </div>
     </div>
