@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/odin-memory-card/static/css/main.58b8970f.css",
+    "main.js": "/odin-memory-card/static/js/main.17f928e7.js",
+    "static/media/zebra.png": "/odin-memory-card/static/media/zebra.9be5f55e97eaf9bad451.png",
+    "static/media/hyena.png": "/odin-memory-card/static/media/hyena.05fd96def7de5a0a95ec.png",
+    "static/media/giraffe.png": "/odin-memory-card/static/media/giraffe.50ee08623f8120e117da.png",
+    "static/media/baboon.png": "/odin-memory-card/static/media/baboon.f5d00d50d72f47a0430a.png",
+    "static/media/oryx.png": "/odin-memory-card/static/media/oryx.68f6bf27f5bd4d5b97b4.png",
+    "static/media/horse.png": "/odin-memory-card/static/media/horse.040329728db49e559550.png",
+    "static/media/warthog.png": "/odin-memory-card/static/media/warthog.98d3f082400a374b5a6b.png",
+    "static/media/hippo.png": "/odin-memory-card/static/media/hippo.fb23d1822cdac771216e.png",
+    "static/media/wildebeast.png": "/odin-memory-card/static/media/wildebeast.37d7a89722bcefbf327f.png",
+    "static/media/cheetah.png": "/odin-memory-card/static/media/cheetah.0aa8288b903ca9dce4a4.png",
+    "static/media/antelope.png": "/odin-memory-card/static/media/antelope.2e175516d78ca1c78bc5.png",
+    "static/media/ostrich.png": "/odin-memory-card/static/media/ostrich.8f0cfaf21cc3ccc48f91.png",
+    "static/media/elephant.png": "/odin-memory-card/static/media/elephant.c8d257eff794babb9a52.png",
+    "static/media/buffalo.png": "/odin-memory-card/static/media/buffalo.c82973d9aadc78eb3f83.png",
+    "static/media/kangaroo.png": "/odin-memory-card/static/media/kangaroo.4a1088b4d516e99ba2f4.png",
+    "static/media/rhino.png": "/odin-memory-card/static/media/rhino.aa2e201fbd30f4fc28a8.png",
+    "static/media/lion.png": "/odin-memory-card/static/media/lion.8eed8efb9f66821cea4e.png",
+    "static/media/llama.png": "/odin-memory-card/static/media/llama.07c47157384e2ddeb9dd.png",
+    "static/media/rat.png": "/odin-memory-card/static/media/rat.623e2de4599ffa3ed4ae.png",
+    "static/media/meerkat.png": "/odin-memory-card/static/media/meerkat.1516843f21a187b08552.png",
+    "index.html": "/odin-memory-card/index.html",
+    "main.58b8970f.css.map": "/odin-memory-card/static/css/main.58b8970f.css.map",
+    "main.17f928e7.js.map": "/odin-memory-card/static/js/main.17f928e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58b8970f.css",
+    "static/js/main.17f928e7.js"
+  ]
+}
