@@ -4,11 +4,18 @@
 
 .play-area {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
     border: 1px solid black;
     padding: 20px;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
 }

@@ -3,12 +3,10 @@ import React from 'react';
 
 const Card = (props) => {
     const name = props.name;
-    const value = props.value;
 
     return (
-        <div className='card' data-value={value}>
-            <img src='' alt='img'/>
-            <p>{name}</p>
+        <div className='card' data-value={name}>
+            <img src={require(`../images/${name}.png`)} alt={`${name}`} data-value={name}/>
         </div>
     );
 };

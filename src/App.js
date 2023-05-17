@@ -6,17 +6,18 @@ import { useState, useEffect } from 'react';
 function App() {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const [numActiveCards, setNumActiveCards] = useState(3);
   const [activeCards, setActiveCards] = useState([]);
   const [clickedCards, setClickedCards] = useState([]);
   const [isGameOver, setIsGameOver] = useState(false);
 
   useEffect(() => {
-    const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    const cards = ['antelope', 'baboon', 'buffalo', 'cheetah', 'elephant', 'giraffe', 'hippo', 'horse', 'hyena', 'kangaroo', 'lion', 'llama', 'meerkat', 'oryx', 'ostrich', 'rat', 'rhino', 'warthog', 'wildebeast', 'zebra'];
     let newCards = [];
 
     const shuffleCards = () => {
       newCards.length = 0;
-      while(newCards.length < 3 + score){
+      while(newCards.length < numActiveCards) {
         let index = Math.floor(Math.random() * cards.length);
         let newCard = cards.slice(index, index + 1)[0];
         if(!newCards.some(card => card === newCard)) {
@@ -26,21 +27,15 @@ function App() {
       setActiveCards(newCards);
     }
 
-    const incrementScore = () => {
-      setScore(score + 1);
-    };
-
-    const trackClickedCards = (e) => {
-      setClickedCards([...clickedCards, e.target.dataset.value]);
-    }
-
     const handleCardClick = (e) => {
+      console.log(e.target);
       if(clickedCards.some(card => card === e.target.dataset.value)) {
         setIsGameOver(true);
       } else {
-        trackClickedCards(e);
+        setClickedCards([...clickedCards, e.target.dataset.value]);
         shuffleCards();
-        incrementScore();
+        setScore(score + 1);
+        setNumActiveCards(numActiveCards + 1);
       }
     }
 
@@ -60,6 +55,7 @@ function App() {
       setHighScore(score);
     setScore(0);
     setClickedCards([]);
+    setNumActiveCards(3);
     setIsGameOver(false);
   }, [isGameOver]);
 
@@ -69,7 +65,7 @@ function App() {
       <button className='start'>Start Game</button>
       <div className='play-area'>
         {activeCards.map(card => {
-          return <Card name={card} value={card}/>
+          return <Card name={card} />
         })}
       </div>
     </div>
