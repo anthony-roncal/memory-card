@@ -5,8 +5,8 @@ const Card = (props) => {
     const name = props.name;
 
     return (
-        <div className='card' data-value={name}>
-            <img src={require(`../images/${name}.png`)} alt={`${name}`} data-value={name}/>
+        <div className='card' data-value={name} key={name}>
+            <img src={require(`../images/${name}.png`)} alt={`${name}`} data-value={name} />
         </div>
     );
 };

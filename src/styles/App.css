@@ -2,6 +2,21 @@
     margin: 0;
 }
 
+.App {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    margin: 50px;
+    gap: 20px;
+    font-size: 20px;
+}
+
 .play-area {
     display: flex;
     flex-wrap: wrap;
@@ -18,4 +33,8 @@
 img {
     width: 150px;
     height: 150px;
+}
+
+.hide {
+    display: none;
 }

@@ -15,6 +15,12 @@ function App() {
     const cards = ['antelope', 'baboon', 'buffalo', 'cheetah', 'elephant', 'giraffe', 'hippo', 'horse', 'hyena', 'kangaroo', 'lion', 'llama', 'meerkat', 'oryx', 'ostrich', 'rat', 'rhino', 'warthog', 'wildebeast', 'zebra'];
     let newCards = [];
 
+    const startGame = () => {
+      setScore(0);
+      shuffleCards();
+      document.querySelector('.start').classList.add('hide');
+    }
+
     const shuffleCards = () => {
       newCards.length = 0;
       while(newCards.length < numActiveCards) {
@@ -28,7 +34,6 @@ function App() {
     }
 
     const handleCardClick = (e) => {
-      console.log(e.target);
       if(clickedCards.some(card => card === e.target.dataset.value)) {
         setIsGameOver(true);
       } else {
@@ -39,11 +44,11 @@ function App() {
       }
     }
 
-    document.querySelector('.start').addEventListener('click', shuffleCards);
+    document.querySelector('.start').addEventListener('click', startGame);
     document.querySelectorAll('.card').forEach(card => card.addEventListener('click', handleCardClick));
 
     return () => {
-      document.querySelector('.start').removeEventListener("click", shuffleCards);
+      document.querySelector('.start').removeEventListener("click", startGame);
       document.querySelectorAll('.card').forEach(card => card.removeEventListener('click', handleCardClick));
     };
 
@@ -51,21 +56,23 @@ function App() {
 
   useEffect(() => {
     setActiveCards([]);
-    if(score > highScore)
+    if(score > highScore) {
       setHighScore(score);
-    setScore(0);
+    }
     setClickedCards([]);
     setNumActiveCards(3);
     setIsGameOver(false);
+    document.querySelector('.start').classList.remove('hide');
   }, [isGameOver]);
 
   return (
     <div className="App">
+      <h1>Memory Card Game</h1>
       <Scoreboard score={score} highScore={highScore}/>
       <button className='start'>Start Game</button>
       <div className='play-area'>
         {activeCards.map(card => {
-          return <Card name={card} />
+          return <Card name={card} key={card}/>
         })}
       </div>
     </div>

@@ -3,6 +3,7 @@ import React from 'react';
 
 const Scoreboard = (props) => {
     const score = props.score;
+    const prevScore = props.prevScore;
     const highScore = props.highScore;
 
     return (
