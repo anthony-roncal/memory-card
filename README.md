@@ -1,6 +1,6 @@
-# odin-memory-card
+# memory-card
 
-This is a practice project for The Odin Project: Memory Card.
+View app at: https://anthony-roncal.github.io/memory-card/
 
 # Getting Started with Create React App
 
